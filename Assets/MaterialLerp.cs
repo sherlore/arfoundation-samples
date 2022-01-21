@@ -19,11 +19,6 @@ public class MaterialLerp : MonoBehaviour
         propertyId = Shader.PropertyToID(propertyName);
     }
 	
-    void OnEnable()
-    {
-		StartVFX();
-    }
-	
 	public void StartVFX()
 	{
 		mat.SetFloat(propertyId, startValue);

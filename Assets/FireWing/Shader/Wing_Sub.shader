@@ -31,7 +31,7 @@ Shader "FireWing/Wing_Sub" {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #define UNITY_PASS_FORWARDBASE
+            #define UNITY_PASS_FORWARDBASE2
             #include "UnityCG.cginc"
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog

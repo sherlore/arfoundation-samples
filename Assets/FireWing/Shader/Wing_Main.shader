@@ -9,7 +9,7 @@ Shader "FireWing/Wing_Main" {
         _TintColor ("Color", Color) = (0.5,0.5,0.5,1)
         _SubTex ("SubTex", 2D) = "white" {}
         _Mask ("Mask", 2D) = "white" {}
-        _Transparency ("Transparency", Range(0, 6)) = 3.971232
+        _Transparency ("Transparency", Range(-6, 6)) = 3.971232
         _Noise ("Noise", 2D) = "black" {}
     }
     SubShader {
@@ -30,7 +30,7 @@ Shader "FireWing/Wing_Main" {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #define UNITY_PASS_FORWARDBASE
+            #define UNITY_PASS_FORWARDBASE1
             #include "UnityCG.cginc"
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
