@@ -7,6 +7,7 @@ public class Spear : MonoBehaviour
 	public Transform rightHand;
 	public Transform spine;
 	public float spinAngle = 80f;
+	public Vector3 eulerAngle;
 	public Vector3 angularSpeed;
 	
     // Start is called before the first frame update
@@ -24,7 +25,8 @@ public class Spear : MonoBehaviour
 		}
 		else
 		{
-			transform.localRotation = Quaternion.identity;
+			// transform.localRotation = Quaternion.identity;
+			transform.localEulerAngles = eulerAngle;
 		}
     }
 }

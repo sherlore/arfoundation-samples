@@ -70,6 +70,7 @@ public class FlowStateController : MonoBehaviour
 					{
 						nowCondition = flowConditions[i];
 						conditionStartMatchTime = Time.time;
+						
 						Handheld.Vibrate();
 						break;
 					}
