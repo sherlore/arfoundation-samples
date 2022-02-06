@@ -987,6 +987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ecb2146fc5426f910be243e4df158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SkeletonPrefab: {fileID: 1245762105030717674, guid: d4f373ef5b07c354c93817dae2885679,
+  m_SkeletonPrefab: {fileID: 3282874145813365385, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
     type: 3}
   m_HumanBodyManager: {fileID: 1335839536}

@@ -9,6 +9,6 @@ public class Dragon : MonoBehaviour
 	
 	void Update()
 	{
-		head.LookAt(directionTarget.position + directionTarget.forward * 100f);
+		head.LookAt(directionTarget.position + directionTarget.right * 100f);
 	}
 }
