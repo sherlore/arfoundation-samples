@@ -77182,7 +77182,7 @@ MonoBehaviour:
   rightElbow: {fileID: 7457124885032621406}
   rightShoulder: {fileID: 8301755267358043486}
   condtionAngle: 30
-  condtionDistance: 0.3
+  condtionDistance: 0.5
   nowState: {fileID: 0}
   nowCondition:
     flowState: {fileID: 0}
@@ -77190,10 +77190,10 @@ MonoBehaviour:
     startHand: 0
     stopHand: 0
   conditionStartMatchTime: 0
-  condtionStartPeriod: 1
+  condtionStartPeriod: 0.5
   stoppingState: 0
   conditionStopMatchTime: 0
-  condtionStopPeriod: 1
+  condtionStopPeriod: 0.5
 --- !u!1 &3288138648610963194
 GameObject:
   m_ObjectHideFlags: 0

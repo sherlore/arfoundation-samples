@@ -60,6 +60,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     var newSkeletonGO = Instantiate(m_SkeletonPrefab, humanBody.transform);
                     boneController = newSkeletonGO.GetComponent<BoneController>();
                     m_SkeletonTracker.Add(humanBody.trackableId, boneController);
+					
+					Handheld.Vibrate();
                 }
 
                 boneController.InitializeSkeletonJoints();
