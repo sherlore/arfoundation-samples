@@ -30,6 +30,7 @@ public class FlowStateController : MonoBehaviour
 	
 	public FlowCondition[] flowConditions;
 	
+	public Transform head;
 	public Transform spine;
 	public Transform leftHand;
 	public Transform leftElbow;
