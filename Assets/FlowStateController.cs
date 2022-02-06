@@ -173,7 +173,7 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Head)
 			{
-				if(Vector3.Distance(rightHand.position, spine.position) < condtionDistance)
+				if(Vector3.Distance(rightHand.position, head.position) < condtionDistance)
 				{
 					return true;
 				}
@@ -235,7 +235,7 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Head)
 			{
-				if(Vector3.Distance(leftHand.position, spine.position) < condtionDistance)
+				if(Vector3.Distance(leftHand.position, head.position) < condtionDistance)
 				{
 					return true;
 				}
