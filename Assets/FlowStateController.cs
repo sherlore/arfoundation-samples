@@ -179,7 +179,7 @@ public class FlowStateController : MonoBehaviour
 					return false;
 				}
 			}
-			/*else if(condtion.direction == Direction.Head)
+			else if(condtion.direction == Direction.Head)
 			{
 				if(Vector3.Distance(rightHand.position, head.position) < condtionDistance)
 				{
@@ -189,7 +189,7 @@ public class FlowStateController : MonoBehaviour
 				{
 					return false;
 				}
-			}*/
+			}
 			else
 			{
 				return false;
@@ -247,7 +247,7 @@ public class FlowStateController : MonoBehaviour
 					return false;
 				}
 			}
-			/*else if(condtion.direction == Direction.Head)
+			else if(condtion.direction == Direction.Head)
 			{
 				if(Vector3.Distance(leftHand.position, head.position) < condtionDistance)
 				{
@@ -257,7 +257,7 @@ public class FlowStateController : MonoBehaviour
 				{
 					return false;
 				}
-			}*/
+			}
 			else
 			{
 				return false;
