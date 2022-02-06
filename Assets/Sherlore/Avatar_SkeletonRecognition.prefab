@@ -49007,6 +49007,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 2417894514985107064}
   directionTarget: {fileID: 1305028708740306318}
+  hand: {fileID: 1640321124440279116}
+  arm: {fileID: 7787001430439903072}
 --- !u!1 &2417894514856596922
 GameObject:
   m_ObjectHideFlags: 0
@@ -77180,8 +77182,9 @@ MonoBehaviour:
   rightHand: {fileID: 5590108574093501256}
   rightElbow: {fileID: 7457124885032621406}
   rightShoulder: {fileID: 8301755267358043486}
-  condtionAngle: 40
-  condtionDistance: 0.35
+  condtionAngle: 30
+  condtionDistance: 0.4
+  triggerDistance: 0.4
   nowState: {fileID: 0}
   nowCondition:
     flowState: {fileID: 0}
@@ -146410,7 +146413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a309e54827e0d499fcf46283f2f032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHand: {fileID: 7457124885032621406}
+  rightHand: {fileID: 5590108574093501256}
+  rightShoulder: {fileID: 4470920988595418587}
   spine: {fileID: 4090708183508624122}
   spinAngle: 60
   eulerAngle: {x: 90, y: 0, z: 0}

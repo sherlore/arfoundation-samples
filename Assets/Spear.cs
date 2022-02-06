@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spear : MonoBehaviour
 {
 	public Transform rightHand;
+	public Transform rightShoulder;
 	public Transform spine;
 	public float spinAngle = 80f;
 	public Vector3 eulerAngle;
@@ -19,7 +20,10 @@ public class Spear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Angle(rightHand.right*-1, spine.up) < spinAngle)
+		Vector3 dirRight = (rightHand.position-rightShoulder.position).normalized;
+		
+        // if(Vector3.Angle(rightHand.right*-1, spine.up) < spinAngle)
+        if(Vector3.Angle(dirRight, spine.up) < spinAngle)
 		{
 			transform.Rotate(angularSpeed * Time.deltaTime);
 		}

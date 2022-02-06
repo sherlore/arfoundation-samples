@@ -41,6 +41,7 @@ public class FlowStateController : MonoBehaviour
 	
 	public float condtionAngle = 30f;
 	public float condtionDistance = 0.3f;
+	public float triggerDistance = 0.3f;
 	
 	public FlowState nowState;
 	public FlowCondition nowCondition;
@@ -128,9 +129,12 @@ public class FlowStateController : MonoBehaviour
 	{
 		if(condtion.startHand == Hand.Left)
 		{
+			Vector3 dirLeft = leftHand.position-leftShoulder.position;
+			
 			if(condtion.direction == Direction.Forward)
 			{
-				if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.up) < condtionAngle)
+				// if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.up) < condtionAngle)
+				if(dirLeft.magnitude > triggerDistance && Vector3.Angle(dirLeft, spine.up) < condtionAngle)
 				{
 					return true;
 				}
@@ -141,7 +145,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Left)
 			{
-				if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.forward*-1f) < condtionAngle)
+				// if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.forward*-1f) < condtionAngle)
+				if(dirLeft.magnitude > triggerDistance && Vector3.Angle(dirLeft, spine.forward*-1f) < condtionAngle)
 				{
 					return true;
 				}
@@ -152,7 +157,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Right)
 			{
-				if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.forward) < condtionAngle)
+				// if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.forward) < condtionAngle)
+				if(dirLeft.magnitude > triggerDistance && Vector3.Angle(dirLeft, spine.forward) < condtionAngle)
 				{
 					return true;
 				}
@@ -163,7 +169,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Up)
 			{
-				if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.right) < condtionAngle)
+				// if(Vector3.Angle(leftElbow.right, leftShoulder.right) < condtionAngle && Vector3.Angle(leftElbow.right, spine.right) < condtionAngle)
+				if(dirLeft.magnitude > triggerDistance && Vector3.Angle(dirLeft, spine.right) < condtionAngle)
 				{
 					return true;
 				}
@@ -172,7 +179,7 @@ public class FlowStateController : MonoBehaviour
 					return false;
 				}
 			}
-			else if(condtion.direction == Direction.Head)
+			/*else if(condtion.direction == Direction.Head)
 			{
 				if(Vector3.Distance(rightHand.position, head.position) < condtionDistance)
 				{
@@ -182,7 +189,7 @@ public class FlowStateController : MonoBehaviour
 				{
 					return false;
 				}
-			}
+			}*/
 			else
 			{
 				return false;
@@ -190,9 +197,12 @@ public class FlowStateController : MonoBehaviour
 		}
 		else
 		{
+			Vector3 dirRight = rightHand.position-rightShoulder.position;
+			
 			if(condtion.direction == Direction.Forward)
 			{
-				if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.up) < condtionAngle)
+				// if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.up) < condtionAngle)
+				if(dirRight.magnitude > triggerDistance && Vector3.Angle(dirRight, spine.up) < condtionAngle)
 				{
 					return true;
 				}
@@ -203,7 +213,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Left)
 			{
-				if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right, spine.forward) < condtionAngle)
+				// if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right, spine.forward) < condtionAngle)
+				if(dirRight.magnitude > triggerDistance && Vector3.Angle(dirRight, spine.forward) < condtionAngle)
 				{
 					return true;
 				}
@@ -214,7 +225,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Right)
 			{
-				if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.forward) < condtionAngle)
+				// if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.forward) < condtionAngle)
+				if(dirRight.magnitude > triggerDistance && Vector3.Angle(dirRight, spine.forward) < condtionAngle)
 				{
 					return true;
 				}
@@ -225,7 +237,8 @@ public class FlowStateController : MonoBehaviour
 			}
 			else if(condtion.direction == Direction.Up)
 			{
-				if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.right) < condtionAngle)
+				// if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.right) < condtionAngle)
+				if(dirRight.magnitude > triggerDistance && Vector3.Angle(dirRight, spine.right) < condtionAngle)
 				{
 					return true;
 				}
@@ -234,7 +247,7 @@ public class FlowStateController : MonoBehaviour
 					return false;
 				}
 			}
-			else if(condtion.direction == Direction.Head)
+			/*else if(condtion.direction == Direction.Head)
 			{
 				if(Vector3.Distance(leftHand.position, head.position) < condtionDistance)
 				{
@@ -244,7 +257,7 @@ public class FlowStateController : MonoBehaviour
 				{
 					return false;
 				}
-			}
+			}*/
 			else
 			{
 				return false;
