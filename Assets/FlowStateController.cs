@@ -9,7 +9,8 @@ public class FlowStateController : MonoBehaviour
 		Forward,
 		Left,
 		Right,
-		Up
+		Up,
+		Head
 	}
 	
 	public enum Hand
@@ -169,6 +170,17 @@ public class FlowStateController : MonoBehaviour
 					return false;
 				}
 			}
+			else if(condtion.direction == Direction.Head)
+			{
+				if(Vector3.Distance(rightHand.position, spine.position) < condtionDistance)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
 			else
 			{
 				return false;
@@ -212,6 +224,17 @@ public class FlowStateController : MonoBehaviour
 			else if(condtion.direction == Direction.Up)
 			{
 				if(Vector3.Angle(rightElbow.right, rightShoulder.right) < condtionAngle && Vector3.Angle(rightElbow.right*-1f, spine.right) < condtionAngle)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else if(condtion.direction == Direction.Head)
+			{
+				if(Vector3.Distance(leftHand.position, spine.position) < condtionDistance)
 				{
 					return true;
 				}
