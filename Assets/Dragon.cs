@@ -5,12 +5,31 @@ using UnityEngine;
 public class Dragon : MonoBehaviour
 {
 	public Transform head;
-    public Transform directionTarget;
-    public Transform hand;
-    public Transform arm;
+	public Transform rightHand;
+	public Transform rightForeArm;
+	public Transform rightArm;
+	public Transform spine;
+	public Transform cam;
+	public float condtionAngle = 40f;
+	
+	void OnEnable()
+	{
+		if(cam == null)
+		{
+			cam = Camera.main.transform;
+		}
+	}
 	
 	void Update()
 	{
-		head.LookAt(directionTarget.position + (hand.position-arm.position) * 100f);
+		if(Vector3.Angle(rightForeArm.right*-1f, spine.right) < condtionAngle && Vector3.Angle(rightArm.right*-1f, spine.right) < condtionAngle)
+		{
+			head.LookAt(cam);
+		}
+		else
+		{
+			head.LookAt(spine.position + rightForeArm.right*-100f);
+			
+		}
 	}
 }

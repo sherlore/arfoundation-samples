@@ -5,9 +5,10 @@ using UnityEngine;
 public class Spear : MonoBehaviour
 {
 	public Transform rightHand;
-	public Transform rightShoulder;
+	public Transform rightForeArm;
+	public Transform rightArm;
 	public Transform spine;
-	public float spinAngle = 80f;
+	public float condtionAngle = 40f;
 	public Vector3 eulerAngle;
 	public Vector3 angularSpeed;
 	
@@ -20,17 +21,13 @@ public class Spear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Vector3 dirRight = (rightHand.position-rightShoulder.position).normalized;
-		
-        // if(Vector3.Angle(rightHand.right*-1, spine.up) < spinAngle)
-        if(Vector3.Angle(dirRight, spine.up) < spinAngle)
+		if(Vector3.Angle(rightForeArm.right*-1f, spine.forward) < condtionAngle && Vector3.Angle(rightArm.right*-1f, spine.forward) < condtionAngle)
 		{
-			transform.Rotate(angularSpeed * Time.deltaTime);
+			transform.localEulerAngles = eulerAngle;
 		}
 		else
 		{
-			// transform.localRotation = Quaternion.identity;
-			transform.localEulerAngles = eulerAngle;
-		}
+			transform.Rotate(angularSpeed * Time.deltaTime);
+		} 
     }
 }
