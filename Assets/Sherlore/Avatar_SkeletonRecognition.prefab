@@ -49011,7 +49011,7 @@ MonoBehaviour:
   rightArm: {fileID: 8301755267358043486}
   spine: {fileID: 4090708183508624122}
   cam: {fileID: 0}
-  condtionAngle: 40
+  condtionAngle: 45
 --- !u!1 &2417894514856596922
 GameObject:
   m_ObjectHideFlags: 0

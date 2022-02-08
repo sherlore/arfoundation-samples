@@ -24,11 +24,15 @@ public class Dragon : MonoBehaviour
 	{
 		if(Vector3.Angle(rightForeArm.right*-1f, spine.right) < condtionAngle && Vector3.Angle(rightArm.right*-1f, spine.right) < condtionAngle)
 		{
-			head.LookAt(cam);
+			Quaternion rotation = Quaternion.LookRotation(cam.position-head.position, Vector3.up);
+			head.rotation = rotation;
+			// head.LookAt(cam);
 		}
 		else
 		{
-			head.LookAt(spine.position + rightForeArm.right*-100f);
+			// head.LookAt(spine.position + rightForeArm.right*-100f);
+			Quaternion rotation = Quaternion.LookRotation(rightForeArm.right*-100f, Vector3.up);
+			head.rotation = rotation;
 			
 		}
 	}
