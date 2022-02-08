@@ -11,6 +11,7 @@ public class Dragon : MonoBehaviour
 	public Transform spine;
 	public Transform cam;
 	public float condtionAngle = 40f;
+	public 
 	
 	void OnEnable()
 	{
@@ -24,14 +25,14 @@ public class Dragon : MonoBehaviour
 	{
 		if(Vector3.Angle(rightForeArm.right*-1f, spine.right) < condtionAngle && Vector3.Angle(rightArm.right*-1f, spine.right) < condtionAngle)
 		{
-			Quaternion rotation = Quaternion.LookRotation(cam.position-head.position, Vector3.up);
+			Quaternion rotation = Quaternion.Euler(0, -90f, 0) * Quaternion.LookRotation(cam.position-head.position, Vector3.up);
 			head.rotation = rotation;
 			// head.LookAt(cam);
 		}
 		else
 		{
 			// head.LookAt(spine.position + rightForeArm.right*-100f);
-			Quaternion rotation = Quaternion.LookRotation(rightForeArm.right*-100f, Vector3.up);
+			Quaternion rotation = Quaternion.Euler(0, -90f, 0) * Quaternion.LookRotation(rightForeArm.right*-100f, Vector3.up);
 			head.rotation = rotation;
 			
 		}
