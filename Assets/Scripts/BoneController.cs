@@ -12,7 +12,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         enum JointIndices
         {
             Invalid = -1,
-            Root = 0, // parent: <none> [-1]
+            RootSK = 0, // parent: <none> [-1]
             Hips = 1, // parent: Root [0]
             LeftUpLeg = 2, // parent: Hips [1]
             LeftLeg = 3, // parent: LeftUpLeg [2]

@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028907630785505445}
   m_Layer: 0
-  m_Name: Root
+  m_Name: RootSK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49011,7 +49011,8 @@ MonoBehaviour:
   rightArm: {fileID: 8301755267358043486}
   spine: {fileID: 4090708183508624122}
   cam: {fileID: 0}
-  condtionAngle: 45
+  condtionAngle: 60
+  eulerSet: {x: 0, y: 0, z: 0}
 --- !u!1 &2417894514856596922
 GameObject:
   m_ObjectHideFlags: 0
@@ -107116,7 +107117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6813011054681311514}
   m_Layer: 0
-  m_Name: Root
+  m_Name: RootSK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145613,7 +145614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5510132736038271705}
   m_Layer: 0
-  m_Name: Head
+  m_Name: HeadSK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
