@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Sherlore/Entrance.unity
+    guid: a45c81cf3cc742a438106a3c124731b1
+  - enabled: 1
     path: Assets/Sherlore/Illusion.unity
     guid: b5bccb82866a24386a677d82ed338689
   - enabled: 0
