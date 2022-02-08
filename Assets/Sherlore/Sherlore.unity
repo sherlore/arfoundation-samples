@@ -372,16 +372,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 297167131575421774, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+    - target: {fileID: 2417894514856418518, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
         type: 3}
-      propertyPath: m_Name
-      value: RootSK
+      propertyPath: m_LocalPosition.y
+      value: -0.46
       objectReference: {fileID: 0}
-    - target: {fileID: 2417894514856768504, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+    - target: {fileID: 2417894514856418518, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
         type: 3}
-      propertyPath: m_Name
-      value: Head
+      propertyPath: m_LocalPosition.z
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 2417894514856596914, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588308942740767543, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1976c73f770d348cabac64c12f28ed6c, type: 2}
+    - target: {fileID: 2588308942740767543, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1976c73f770d348cabac64c12f28ed6c, type: 2}
+    - target: {fileID: 2588308942740767543, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1976c73f770d348cabac64c12f28ed6c, type: 2}
     - target: {fileID: 3282874145813365385, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
         type: 3}
       propertyPath: m_Name
@@ -441,16 +461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287701248292315533, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
-        type: 3}
-      propertyPath: m_Name
-      value: RootSK
-      objectReference: {fileID: 0}
-    - target: {fileID: 9165920790419899966, guid: 1f6a87f84fd7988478c1e5fb1713cbb9,
-        type: 3}
-      propertyPath: m_Name
-      value: HeadSK
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f6a87f84fd7988478c1e5fb1713cbb9, type: 3}
